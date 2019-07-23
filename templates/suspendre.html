@@ -1,0 +1,38 @@
+{% extends 'accueil.html'%}
+{% block content %}
+
+
+       
+
+<table class="table table-striped">
+
+        <tr>
+                <th>Idapprenant</th>
+                <th>matricule</th>
+                <th>prenom</th>
+                <th>nom</th>
+                <th>Date Naiss</th>
+                <td>Action</td>
+
+        </tr>
+
+
+        {% for row in eric %}
+
+        <tr>
+
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+            <td>{{row.4}}</td>
+            <td>
+                <a href="/suspendre2/{{row.0}}" class="btn btn-warning btn-xs">Suspendre</a>
+            </td> 
+
+        </tr>
+
+        {% endfor %}
+
+        </table>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'accueil.html'%}
+{% block content %}
+
+<div  class="container"> 
+    <fieldset  class="form" >
+        <b>
+        <h3 class="titre"><b>Inscription Scolarité</b></h3>
+        <form action="#" method="post"> 
+        <label for=""> matricule:</label>
+        <input type="text" name="matricule" id="matricule"> 
+        <br><br>
+        <label for=""> prenom:</label>
+        <input type="text" name="prenom" id="prenom"> 
+        <br><br>
+        <label for=""> nom: </label>
+        <input type="text" name="nom" id="nom">
+        <br><br>
+        <label for=""> Date Naiss:</label>
+        <input type="date" name="Date Naiss" id="Date Naiss">
+        <br><br>
+        <label for="Nom Promo">Nom Promo</label>
+        <select name="Nom Promo" id="Nom Promo">
+            {%for apprenant in data%}
+                <option value="{{apprenant[0]}}">{{apprenant[1]}}</option>
+            {%endfor%}
+            </select> 
+        <input type="reset" value="Effacer" class="effacer">
+        <input type="submit" value="Envoyer" class="envoyer">
+        </form>
+    </b>
+    </fieldset>
+</div>
+{% endblock content %}

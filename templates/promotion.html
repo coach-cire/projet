@@ -1,0 +1,27 @@
+{% extends 'accueil.html'%}
+{% block content %}
+
+ <div class="form">
+    <form action="" method="post">
+    <h3 class="titre">Inscription Promotion</h3>
+    <label for=""> Nom Promo:</label>
+    <input type="text" name="nompromo" id="name" required> 
+    <br><br>
+    <label for=""> Date Debut:</label>
+    <input type="date" name="date_debut" id="name" required>
+    <br> <br>
+    <label for=""> Date Fin:</label>
+    <input type="date" name="date_fin" id="name" required>
+    <br> <br>
+    <label for="">Nom Promo:</label>
+        <select name="referentiel" id="name" required>
+            {%for promo in data1%}
+                <option value="{{promo[0]}}">{{promo[1]}}</option>
+            {%endfor%}
+        </select> <br> <br> <br>
+<input type="reset" value="Effacer" class="effacer">
+<input type="submit" value="Envoyer" class="envoyer">
+</form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static',filename='sa.jpg')}}">
+    <link rel="stylesheet" href = "{{url_for('static', filename='css/accueil.css')}}">
+    <link rel="stylesheet" href = "{{url_for('static', filename='css/test.css')}}">
+    <link rel="stylesheet" href = "{{url_for('static', filename='css/inscription.css')}}">
+</head>
+<body>
+    <header class="container-fluid">
+                <div class="container">
+                        <h2 id="mot">BIENVENUE A LA SONATEL ACADEMY</h2>
+                        <img src="{{url_for('static',filename='sonatel.gif')}}" id="photo1">
+                        <img src="{{url_for('static',filename='sonatel.gif')}}" id="photo2">
+                </div>
+    </header>
+    <div class="container3">
+    <!-- <marquee>
+        <img src="sonatel.gif" class="photo3" alt="logo">
+    </marquee> -->
+    </div>
+    <div class="container-fluid">
+        <ul id="menu-demo2">
+                <li><a href="/accueil">ACCUEIL</a></li>
+                <li><a href="#">Scolarite</a>
+                        <ul>
+                            <li><a href="/inscription">Inscription</a></li>
+                            <li><a href="/annuler">Annuler</a></li>
+                            <li><a href="/update">Modifier</a></li>
+                            <li><a href="/suspendre1">Suspendre</a></li>
+                        </ul>
+                </li>
+                <li><a href="#">Referentiel</a>
+                        <ul>
+                            <li><a href="/referentiel">Nouveau</a></li>
+                            <li><a href="/updateref">Modifier</a></li>
+                        </ul>
+                </li>
+                <li><a href="#">Promotion</a>
+                        <ul>
+                            <li><a href="/promotion">Nouveau</a></li>
+                            <li><a href="/update1">Modifier</a></li>
+                            <li><a href="#">Lister</a></li>
+                        </ul>
+                </li>
+        </ul>
+    </div>
+    {% block content %}{% endblock content %}
+    
+    <div class="footer">
+        <p>contact: sonatelacademy@sonatel.sn/ 777777777</p>
+    </div>
+   
+    </body>
+    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    </html>
